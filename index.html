@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>Logga in</h2>
+
+        <form id="myForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+            <label for="Mail">Email:</label>
+            <input type="text" id="Mail" name="Mail">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        let username = null;
+        const form = document.getElementById('myForm');
+
+        form.addEventListener('submit', function (event){
+            event.preventDefault();
+
+            const Email = document.getElementById('Mail').value;
+            const text = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if(text == "Hyra" && password == "Elsparkcykel" && Email == "Elsparkcykel@gmail.com"){
+                username = text;
+                window.location.href = `index1.html?username=${encodeURIComponent(username)}`;
+            }
+            else{
+                alert("Fel användarnamn eller lösenord!");
+            }
+        });
+    </script>
+
+</body>
+</html>
