@@ -17,12 +17,38 @@
     width: 300px;
 }
 
- .text1 { 
-height:100vh ;
+ .container { 
 display: flex;
-flex-direction: column;
 justify-content: center;
 align-items:flex-start ;
-padding-left: 8%;
-text-align: left;
+padding: 50px; 
+height: 100vh;
+flex-wrap: nowrap;
+font-family:Arial, Helvetica, sans-serif ;
+
  }    
+
+ .text1{
+max-width: 50%;
+
+
+ }
+
+ .text1 h2 {
+
+font-size: 48px; 
+margin-bottom: 20px;
+ }
+
+ .text1 p {
+font-size: 20px;
+line-height: 1.5;
+ }
+
+ .bild img{
+max-width: 50%;
+height: auto;
+border-radius: 10px;
+padding: 10px;
+
+ }
