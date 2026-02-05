@@ -1,12 +1,12 @@
 
-    body {
-    margin: 0;
+.backgrund {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("https://eu-central-1-shared-euc1-02.graphassets.com/AMcYXQcgeRNu5q0szWSm1z/60Is7YnJRDuBvCFRrR78") center/cover;
-    font-family: Arial, sans-serif;
+
+    background: url("https://eu-central-1-shared-euc1-02.graphassets.com/AMcYXQcgeRNu5q0szWSm1z/60Is7YnJRDuBvCFRrR78")
+    center / cover no-repeat;
 }
 
 .box {
@@ -17,4 +17,12 @@
     width: 300px;
 }
 
-     
+ .text1 { 
+height:100vh ;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items:flex-start ;
+padding-left: 8%;
+text-align: left;
+ }    
