@@ -48,5 +48,36 @@
 </div>
 
 
+<div id="historyBox" class="history">
+    <h3>Historik</h3>
+    <p id="historyText">Ingen scooter vald ännu.</p>
+</div>
+
+</div>
 </body>
+<script>
+    const boxes = document.querySelectorAll('.image-container .box');
+    const historyText = document.getElementById('historyText');
+
+    boxes.forEach(box => {
+        box.addEventListener('click', function() {
+
+            // Gör alla röda
+            boxes.forEach(b => {
+                b.classList.remove("selected");
+                b.classList.add("not-selected");
+            });
+
+            // Gör den klickade grön
+            this.classList.remove("not-selected");
+            this.classList.add("selected");
+
+            // Hämta scooter-namnet
+            const scooterName = this.querySelector("h3").innerText;
+
+            // Uppdatera historiken
+            historyText.innerText = "Du har hyrt " + scooterName;
+        });
+    });
+</script>
 </html>
