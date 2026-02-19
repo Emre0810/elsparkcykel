@@ -8,6 +8,12 @@
 </head>
 
 <body>
+    <!-- 
+Denna sektion är en inloggningsruta.
+Den innehåller ett formulär där användaren kan skriva in
+användarnamn, lösenord och email.
+-->
+
 <div class = "backgrund">
 
     <div class="box">
@@ -28,21 +34,30 @@
     </div>
 
     <script>
+            // Skapar en variabel som ska spara användarnamnet
         let username = null;
+        
+    // Hämtar formuläret med id="myForm"
         const form = document.getElementById('myForm');
-
+    // Lägger till en händelse som körs när formuläret skickas
         form.addEventListener('submit', function (event){
+                    // Stoppar sidan från att laddas om (standard-beteende)
             event.preventDefault();
-
+        // Hämtar värdet från input-fälten
             const Email = document.getElementById('Mail').value;
             const text = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
+        // Kontrollerar om inloggningsuppgifterna stämmer
             if(text == "Hyra" && password == "Elsparkcykel" && Email == "Elsparkcykel@gmail.com"){
                 username = text;
+            
+                               // Skickar vidare användaren till index1.html
+            // och skickar med username i URL:en
                 window.location.href = `index1.html?username=${encodeURIComponent(username)}`;
             }
             else{
+            // Visar ett felmeddelande om något är fel
                 alert("Fel användarnamn eller lösenord!");
             }
         });

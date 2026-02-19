@@ -9,6 +9,9 @@
 
 
 <body>
+
+   <!-- Detta är en sida som visar tre olika elscootrar 
+med bild, pris per minut och maxhastighet.-->
 <div class = "backgrund"> 
 <div class = "image-container"> 
     <div class = "box">      
@@ -38,11 +41,6 @@
 <p> 8 kr per minut </p>
 <p>45 km/h</p>
 
-
-
-
-
-
     </div>
 </div>
 </div>
@@ -56,10 +54,13 @@
 </div>
 </body>
 <script>
+        // Hämtar alla boxar (elscootrar)
     const boxes = document.querySelectorAll('.image-container .box');
+        // Hämtar paragrafen där historiken ska visas
     const historyText = document.getElementById('historyText');
-
+    // Loopar igenom varje box
     boxes.forEach(box => {
+             // Lägger till en klick-händelse på varje box
         box.addEventListener('click', function() {
 
             // Gör alla röda
